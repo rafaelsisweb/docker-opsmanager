@@ -27,10 +27,7 @@ ENV OPSMANAGER_VERSION=2.0.1.332-1 \
 # INSTALL MMS & MMS-BACKUP
 RUN  curl -OL https://downloads.mongodb.com/on-prem-mms/rpm/mongodb-mms-${OPSMANAGER_VERSION}.x86_64.rpm \
     && rpm -ivh mongodb-mms-${OPSMANAGER_VERSION}.x86_64.rpm && rm -f mongodb-mms-${OPSMANAGER_VERSION}.x86_64.rpm \
-    && curl -OL https://downloads.mongodb.com/on-prem-mms/rpm/mongodb-mms-backup-daemon-${OPSMANAGER_VERSION}.x86_64.rpm \
-    && rpm -ivh mongodb-mms-backup-daemon-${OPSMANAGER_VERSION}.x86_64.rpm && rm -f mongodb-mms-backup-daemon-${OPSMANAGER_VERSION}.x86_64.rpm \
-    && cd /opt/mongodb/ && rm -fr mms-backup-daemon/jdk && cd mms-backup-daemon && ln -s ../mms/jdk . \
-    && cd /opt/mongodb && rm -fr mms-backup-daemon/lib && cd mms-backup-daemon && ln -s ../mms/lib . 
+    && curl -OL https://downloads.mongodb.com/on-prem-mms/rpm/mongodb-mms-backup-daemon-${OPSMANAGER_VERSION}.x86_64.rpm
 
 RUN echo '[10gen] ' >> /etc/yum.repos.d/10gen.repo && \
 echo 'name=10gen Repository' >> /etc/yum.repos.d/10gen.repo && \
