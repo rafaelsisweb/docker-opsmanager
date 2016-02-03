@@ -5,7 +5,7 @@ backupmongo:
   image: mongo:3
 
 opsmanager:
-  image: sahsu/docker-opsmanager
+  image: rafaelsisweb/docker-opsmanager
   links:
     - appmongo:appmongo
     - backupmongo:backupmongo
