@@ -14,7 +14,7 @@
 # Intro
   Dockerfile / Docker-compose file to build a MongoDB Ops Manager container image.
 ## Version
-  1. Latest Version: `1.8.2.312-1`
+  1. Latest Version: `2.0.1.332-1`
   1. 1.8.1 - pull sahsu/docker-opsmanager:1.8.1
   1. 1.8.2 - pull sahsu/docker-opsmanager:1.8.2
 
